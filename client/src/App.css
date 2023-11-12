@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: BKFont;
+  src: url("/public/DK_Woolwich.otf");
+}
+
+* {
+  font-family: "BKFont";
+}

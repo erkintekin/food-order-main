@@ -28,7 +28,11 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="#">
-            Navbar
+            <img
+              src="https://www.burgerking.com.tr/assets/Img/logo@2x.png?v=1"
+              width={"80px"}
+              alt=""
+            />
           </Link>
           <button
             className="navbar-toggler"
@@ -50,7 +54,7 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/">
-                  Ürünler
+                  Products
                 </Link>
               </li>
               {currentUser && currentUser.isAdmin == true ? (
@@ -66,14 +70,12 @@ function Navbar() {
             {currentUser ? (
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <Link className="nav-link">
-                    Hoşgeldin {currentUser.name}{" "}
-                  </Link>
+                  <Link className="nav-link">Welcome, {currentUser.name} </Link>
                 </li>
 
                 <li className="nav-item">
                   <Link className="nav-link" to="/myorders">
-                    Siparişlerim
+                    Orders
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -83,7 +85,7 @@ function Navbar() {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/sepet">
-                    Sepet
+                    Cart
                     <i className="fa-solid fa-cart-shopping fa-beat mx-2"></i>
                     <span className="position-absolute top-10 start-80 translate-middle badge rounded-pill bg-white text-danger px-2">
                       {cartItems.length}
@@ -95,12 +97,12 @@ function Navbar() {
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
                   <Link className="nav-link" to="/login">
-                    Giriş Yap
+                    Login
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/register">
-                    Kayıt Ol
+                    Register
                   </Link>
                 </li>
               </ul>
