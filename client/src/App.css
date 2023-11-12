@@ -39,7 +39,7 @@
 
 @font-face {
   font-family: BKFont;
-  src: url("/public/DK_Woolwich.otf");
+  src: url("/src/DK_Woolwich.otf");
 }
 
 * {
