@@ -42,6 +42,11 @@
   src: url("/src/DK_Woolwich.otf");
 }
 
-nav {
+/* nav,
+h2,
+h3,
+label,
+.btn */
+* {
   font-family: "BKFont";
 }

@@ -24,7 +24,7 @@ function CartPage() {
           <SepetBos />
         ) : (
           <div className="text-center">
-            <h2 className="display-2 text-warning">Sepetim</h2>
+            <h2 className="display-2 text-warning">Cart</h2>
 
             {cartItems.map((urun) => (
               <div className="row border border-3 border-warning shadow-lg p-3 mb-5">
@@ -42,7 +42,7 @@ function CartPage() {
                   <p className="w-75 mx-auto">{urun.desc} </p>
                 </div>
                 <div className="col-md-2">
-                  <h5 className="text-dark">Ürün Adedi</h5>
+                  <h5 className="text-dark">Product Amount</h5>
                   <div className="d-flex justify-content-center align-items-center w-50 mx-auto">
                     <i
                       class="fa-regular fa-square-plus text-danger fa-2x  "
@@ -75,13 +75,13 @@ function CartPage() {
                     onClick={() => dispatch(deleteFromCartAction(urun))}
                   ></i>
                   <p className="text-danger " style={{ fontWeight: "bold" }}>
-                    Fiyat: {urun.fiyatlar} ₺
+                    Amount: {urun.fiyatlar} ₺
                   </p>
                 </div>
               </div>
             ))}
             <h3 className="text-center text-danger">
-              Toplam Fiyat: {toplamFiyat} ₺
+              Total Price: {toplamFiyat} ₺
             </h3>
             <Checkout toplamFiyat={toplamFiyat} />
           </div>

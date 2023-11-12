@@ -13,7 +13,7 @@ function Login() {
   const navigate = useNavigate();
   const girisHandler = () => {
     if (mail === "" || password === "") {
-      Swal.fire("Eksik alanları doldurunuz");
+      Swal.fire("Fill empty areas");
     } else {
       const kullanici = {
         mail: mail,
@@ -24,7 +24,7 @@ function Login() {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "Giriş Başarılı",
+          title: "Login is successfull",
           showConfirmButton: false,
           timer: 1500,
         });
@@ -33,7 +33,7 @@ function Login() {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Giriş hatalı!",
+          text: "login unsuccessfull",
         });
       }
     }
@@ -48,23 +48,23 @@ function Login() {
     <div className="vh-100 d-flex align-items-center justify-content-center">
       <div className="shadow p-3 rounded bg-dark w-25">
         <div className="form-group my-3">
-          <label htmlFor="mail">Mailinizi Giriniz</label>
+          <label htmlFor="mail">Enter your e-mail</label>
           <input
             type="text"
             className="form-control"
             id="mail"
             aria-describedby="mailDescription"
-            placeholder="Lütfen Mailinizi Giriniz."
+            placeholder="Please enter your e-mail"
             onChange={(e) => setMail(e.target.value)}
           />
         </div>
         <div className="form-group my-3">
-          <label htmlFor="password">Parolanızı Giriniz</label>
+          <label htmlFor="password">Enter your password</label>
           <input
             type="password"
             className="form-control"
             id="password"
-            placeholder="Lütfen Parolanızı Giriniz"
+            placeholder="Please enter your password"
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>

@@ -38,7 +38,7 @@ function MenuList({ menu }) {
 
           <div className="row">
             <div className="col-md-6">
-              <h5>Özellik</h5>
+              <h5>Choice</h5>
               <select
                 name=""
                 id=""
@@ -52,7 +52,7 @@ function MenuList({ menu }) {
               </select>
             </div>
             <div className="col-md-6">
-              <h5>Miktar</h5>
+              <h5>Amount</h5>
               <input
                 type="number"
                 min={1}
@@ -62,16 +62,15 @@ function MenuList({ menu }) {
                 onChange={adetHandler}
               />
             </div>
-            <h5 className="text-danger">
-              Fiyat:
+            <h4 className="text-danger">
               {menu.fiyat[0][ozellik] *
                 (miktar > 10 ? 10 : miktar < 1 ? 1 : miktar)}{" "}
               ₺
-            </h5>
+            </h4>
           </div>
 
           <button className="btn btn-danger w-75 mt-3" onClick={addToCart}>
-            Sepete Ekle
+            Add to Cart
           </button>
         </div>
       </div>
@@ -93,12 +92,12 @@ function MenuList({ menu }) {
             style={{ height: "300px" }}
             alt=""
           />
-          <h1>Kategori: {menu.kategori}</h1>
+          <h1>Categories: {menu.kategori}</h1>
           <p>{menu.desc}</p>
         </Modal.Body>
         <Modal.Footer>
           <button className="btn btn-warning" onClick={handleClose}>
-            Kapat
+            Close
           </button>
         </Modal.Footer>
       </Modal>

@@ -56,33 +56,33 @@ function Register() {
   return (
     <div style={{ marginTop: "100px" }}>
       <div className="container bg-warning w-50" style={{ height: "350px" }}>
-        <h2 className="display-4">Kullanıcı Kayıt Ekranı</h2>
+        <h2 className="display-4">REGISTER</h2>
         <input
           type="text"
-          placeholder="İsminizi giriniz"
+          placeholder="Name"
           className="form-control"
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="email"
-          placeholder="Email giriniz"
+          placeholder="e-mail"
           className="form-control my-3"
           onChange={(e) => setMail(e.target.value)}
         />
         <input
           type="password"
-          placeholder="Şifrenizi giriniz"
+          placeholder="Password"
           className="form-control"
           onChange={(e) => setPassword(e.target.value)}
         />
         <input
           type="password"
-          placeholder="Şifrenizi tekrar giriniz"
+          placeholder="Re-enter your password"
           className="form-control my-3"
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
         <button className="btn btn-danger w-50 m-auto" onClick={kaydolHandler}>
-          YENİ KAYIT OLUŞTUR
+          Create New User
         </button>
       </div>
     </div>

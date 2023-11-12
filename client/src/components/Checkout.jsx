@@ -30,7 +30,14 @@ function Checkout({ toplamFiyat }) {
         billingAddress
         token={tokenHandler}
       >
-        <button className="btn btn-outline-danger mb-3 w-25">HEMEN ÖDE!</button>
+        <button className="btn btn-outline-danger mb-3 w-25">
+          Pay with Stripe!{" "}
+          <img
+            src="https://b.stripecdn.com/manage-statics-srv/assets/public/favicon.ico"
+            width={"20px"}
+            alt=""
+          />
+        </button>
       </StripeCheckout>
     </div>
   );

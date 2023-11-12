@@ -70,7 +70,13 @@ function Navbar() {
             {currentUser ? (
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <Link className="nav-link">Welcome, {currentUser.name} </Link>
+                  <Link className="nav-link">
+                    <i
+                      className="fa-solid fa-user fa-flip"
+                      style={{ color: "#000000" }}
+                    />{" "}
+                    Welcome, {currentUser.name}{" "}
+                  </Link>
                 </li>
 
                 <li className="nav-item">
