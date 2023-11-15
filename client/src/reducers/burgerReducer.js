@@ -31,6 +31,7 @@ export const editBurgerReducer = (state = {}, action) => {
       return {
         loading: false,
         success: true,
+        editedBurgers: action.payload,
       };
     case "EDIT_BURGER_FAILED":
       return {
@@ -43,42 +44,41 @@ export const editBurgerReducer = (state = {}, action) => {
   }
 };
 
-export const addBurgerReducer = (state = {}, action) => {
+export const getBurgerByIdReducer = (state = {}, action) => {
   switch (action.type) {
-    case "ADD_BURGER_REQUEST":
+    case "GET_BURGER_BY_ID_REQUEST":
       return {
         loading: true,
         ...state,
       };
-    case "ADD_BURGER_SUCCESS":
+    case "GET_BURGER_BY_ID_SUCCESS":
       return {
         loading: false,
-        success: true,
+        burger: action.payload,
       };
-    case "ADD_BURGER_FAILED":
+    case "GET_BURGER_BY_ID_FAILED":
       return {
         loading: false,
         error: action.payload,
       };
-
     default:
       return state;
   }
 };
 
-export const getBurgerByIdReducer = (state = {}, action) => {
+export const addBurgerReducer = (state = {}, action) => {
   switch (action.type) {
-    case "GET_BURGERS_BY_ID_REQUEST":
+    case "ADD_BURGERS_REQUEST":
       return {
         loading: true,
         ...state,
       };
-    case "GET_BURGERS_BY_ID_SUCCESS":
+    case "ADD_BURGERS_SUCCESS":
       return {
         loading: false,
-        burger: action.payload,
+        success: true,
       };
-    case "GET_BURGERS_BY_ID_FAILED":
+    case "ADD_BURGERS_FAILED":
       return {
         loading: false,
         error: action.payload,

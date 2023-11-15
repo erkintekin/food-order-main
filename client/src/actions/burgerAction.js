@@ -56,6 +56,7 @@ export const editBurgerAction = (editedBurger) => async (dispatch) => {
 
 export const addBurgerAction = (menu) => async (dispatch) => {
   dispatch({ type: "ADD_BURGERS_REQUEST" });
+
   try {
     const response = await axios.post(
       "http://localhost:4000/api/burgers/addBurger",
@@ -67,7 +68,7 @@ export const addBurgerAction = (menu) => async (dispatch) => {
     });
   } catch (error) {
     dispatch({
-      type: "ADD_BURGERS_ERROR",
+      type: "ADD_BURGERS_FAILED",
       payload: error,
     });
   }
@@ -82,7 +83,6 @@ export const getBurgerById = (burgerid) => async (dispatch) => {
       { burgerid }
     );
 
-    console.log(response);
     dispatch({ type: "GET_BURGER_BY_ID_SUCCESS", payload: response.data });
   } catch (error) {
     dispatch({

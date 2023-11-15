@@ -18,7 +18,6 @@ import {
   getAllOrdersReducer,
   getUsersOrdersReducer,
 } from "./reducers/orderReducer";
-import { editBurgerAction } from "./actions/burgerAction";
 
 const finalReducer = combineReducers({
   getAllBurgersReducer: getAllBurgersReducer,
